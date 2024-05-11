@@ -3,26 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/homeFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.kevinmuchene.animalkingdomexplorer.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
-
+        android:id="@+id/homeFragment"
+        android:name="com.kevinmuchene.animalkingdomexplorer.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_homeFragment_to_animalDetailsFragment"
+            app:destination="@id/animalDetailsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_specialDetailsFragment"
+            app:destination="@id/specialDetailsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.kevinmuchene.animalkingdomexplorer.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
-
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
-    </fragment>
+        android:id="@+id/animalDetailsFragment"
+        android:name="com.kevinmuchene.animalkingdomexplorer.AnimalDetailsFragment"
+        android:label="Animal Details" />
+    <fragment
+        android:id="@+id/specialDetailsFragment"
+        android:name="com.kevinmuchene.animalkingdomexplorer.SpecialDetailsFragment"
+        android:label="Special Details" />
 </navigation>
