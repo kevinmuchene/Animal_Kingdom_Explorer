@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/speciesNameId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:hint="Species name"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/speciesDescriptionId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Species Description"
+        android:layout_marginBottom="15dp"
+        android:inputType="text"/>
+
+
+</LinearLayout>

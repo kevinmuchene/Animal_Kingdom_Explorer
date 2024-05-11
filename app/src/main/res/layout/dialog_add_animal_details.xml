@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/animalName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:hint="Animal Name"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/animalHabitat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Habitat"
+        android:layout_marginBottom="15dp"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/animalDiet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Diet"
+        android:layout_marginBottom="15dp"
+        android:inputType="text"/>
+
+
+
+</LinearLayout>
