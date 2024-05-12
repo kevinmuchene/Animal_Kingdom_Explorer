@@ -20,9 +20,15 @@
     <fragment
         android:id="@+id/animalDetailsFragment"
         android:name="com.kevinmuchene.animalkingdomexplorer.AnimalDetailsFragment"
-        android:label="Animal Details" />
+        android:label="Animal Details" >
+
+        <argument
+            android:name="animal"
+            app:argType="com.kevinmuchene.animalkingdomexplorer.model.Animal"
+            app:nullable="true"/>
+    </fragment>
     <fragment
         android:id="@+id/specialDetailsFragment"
-        android:name="com.kevinmuchene.animalkingdomexplorer.SpecialDetailsFragment"
+        android:name="com.kevinmuchene.animalkingdomexplorer.SpeciesDetailsFragment"
         android:label="Special Details" />
 </navigation>

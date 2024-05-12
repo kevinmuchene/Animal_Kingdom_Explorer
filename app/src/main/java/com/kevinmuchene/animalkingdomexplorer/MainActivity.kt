@@ -9,12 +9,23 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import androidx.lifecycle.ViewModelProvider
+import com.kevinmuchene.animalkingdomexplorer.database.AnimalDatabase
+import com.kevinmuchene.animalkingdomexplorer.database.SpeciesDatabase
 import com.kevinmuchene.animalkingdomexplorer.databinding.ActivityMainBinding
+import com.kevinmuchene.animalkingdomexplorer.repository.AnimalRepository
+import com.kevinmuchene.animalkingdomexplorer.repository.SpeciesRepository
+import com.kevinmuchene.animalkingdomexplorer.viewmodel.AnimalViewModel
+import com.kevinmuchene.animalkingdomexplorer.viewmodel.AnimalViewModelFactory
+import com.kevinmuchene.animalkingdomexplorer.viewmodel.SpeciesViewModel
+import com.kevinmuchene.animalkingdomexplorer.viewmodel.SpeciesViewModelFactory
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
+    private lateinit var animalViewModel: AnimalViewModel
+    private lateinit var speciesViewModel: SpeciesViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,8 +40,20 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
 
 
+        setupViewModel()
+
+    }
+
+    private fun setupViewModel() {
+        val animalRepository = AnimalRepository(AnimalDatabase(this))
+        val animalViewModelFactory = AnimalViewModelFactory(application, animalRepository)
+
+        val speciesRepository = SpeciesRepository(SpeciesDatabase(this))
+        val speciesViewModelFactory = SpeciesViewModelFactory(application, speciesRepository)
 
 
+        animalViewModel = ViewModelProvider(this, animalViewModelFactory)[AnimalViewModel::class.java]
+        speciesViewModel = ViewModelProvider(this, speciesViewModelFactory)[SpeciesViewModel::class.java]
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

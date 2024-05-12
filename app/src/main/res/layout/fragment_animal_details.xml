@@ -5,6 +5,12 @@ xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/animalRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="1dp" />
 
 
 <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -15,5 +21,7 @@ android:layout_height="match_parent">
     app:layout_constraintEnd_toEndOf="parent"
     android:id="@+id/newsFabId"
     android:src="@drawable/baseline_360_24"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
