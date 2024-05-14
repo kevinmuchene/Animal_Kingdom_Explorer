@@ -1,8 +1,7 @@
 # Animal Kingdom Explorer
 
 ## Overview
-Animal Kingdom Explorer is an Android application designed to help users explore and manage information about different animals and their species. 
-This app uses modern Android development tools and practices to ensure a seamless and efficient user experience.
+Animal Kingdom Explorer is an Android application that help users explore and manage information about different animals and their species. 
 
 ## Features
 
