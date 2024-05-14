@@ -10,7 +10,6 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.kevinmuchene.animalkingdomexplorer.adapter.AnimalAdapter
 import com.kevinmuchene.animalkingdomexplorer.adapter.SpeciesAdapter
 import com.kevinmuchene.animalkingdomexplorer.database.SpeciesDatabase
 import com.kevinmuchene.animalkingdomexplorer.databinding.FragmentSpecialDetailsBinding
@@ -21,7 +20,6 @@ import com.kevinmuchene.animalkingdomexplorer.viewmodel.SpeciesViewModelFactory
 
 class SpeciesDetailsFragment : Fragment() {
 
-
     private lateinit var binding: FragmentSpecialDetailsBinding;
     private lateinit var speciesAdapter: SpeciesAdapter
     private lateinit var speciesViewModel: SpeciesViewModel
@@ -29,8 +27,7 @@ class SpeciesDetailsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-
+    ): View {
 
         binding = FragmentSpecialDetailsBinding.inflate(inflater, container, false);
 
@@ -68,7 +65,7 @@ class SpeciesDetailsFragment : Fragment() {
         }
     }
     private fun displayAnimalSpeciesDialog() {
-        val dialogView = LayoutInflater.from(requireContext()).inflate(R.layout.dialog_add_animal_special_details, null)
+        val dialogView = LayoutInflater.from(requireContext()).inflate(R.layout.dialog_add_animal_species_details, null)
 
         val speciesNameEditText = dialogView.findViewById<EditText>(R.id.speciesNameId)
         val speciesDescriptionEditText = dialogView.findViewById<EditText>(R.id.speciesDescriptionId)

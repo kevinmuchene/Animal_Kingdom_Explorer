@@ -45,7 +45,7 @@ class SpeciesAdapter : RecyclerView.Adapter<SpeciesAdapter.SpeciesViewHolder>() 
         val currentSpecies = differ.currentList[position]
 
         holder.itemBinding.speciesNameAdapt.text = currentSpecies.speciesName
-        holder.itemBinding.speciesNameAdapt.text = currentSpecies.speciesDescription
+        holder.itemBinding.speciesDescriptionAdapt.text = currentSpecies.speciesDescription
     }
 
 

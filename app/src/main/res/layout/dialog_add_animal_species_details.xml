@@ -13,13 +13,20 @@
         android:hint="Species name"
         android:inputType="text"/>
 
+
     <EditText
-        android:id="@+id/speciesDescriptionId"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:id="@+id/speciesDescriptionId"
+        android:layout_weight="200"
+        android:gravity="top|start"
+        android:scrollbars="vertical"
+        android:minHeight="100dp"
+        android:fontFamily="sans-serif-condensed-medium"
         android:hint="Species Description"
-        android:layout_marginBottom="15dp"
-        android:inputType="text"/>
+        android:inputType="textMultiLine|textCapSentences|textAutoCorrect"
+        android:textSize="15sp"/>
+
 
 
 </LinearLayout>

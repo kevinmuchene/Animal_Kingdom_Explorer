@@ -30,5 +30,5 @@
     <fragment
         android:id="@+id/specialDetailsFragment"
         android:name="com.kevinmuchene.animalkingdomexplorer.SpeciesDetailsFragment"
-        android:label="Special Details" />
+        android:label="Species" />
 </navigation>
